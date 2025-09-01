@@ -62,16 +62,19 @@
   cursor: pointer;
   position: relative;
   border-radius: 8px;
+  width: 100%;
 }
 
 .gallery-img {
-  width: 100%;
-  height: 400px;
+  width: 100%;         /* take full width of card */
+  object-fit: contain;  /* show entire image without cropping */
+  border-radius: 8px;   /* optional: rounded corners */
   transition: transform 0.3s ease;
 }
 
+/* Optional: zoom on hover */
 .gallery-card:hover .gallery-img {
-  transform: scale(1.05); /* subtle hover zoom for small pics */
+  transform: scale(1.05); /* subtle zoom effect */
 }
 
 /* Modal */
@@ -107,15 +110,33 @@
   z-index: 2;
 }
 
-.modal-img {
-  display: block;
-  width: 100%;      /* full modal width */
-  height: auto;
-  transition: transform 0.1s ease-out;
-  transform: scale(2);   /* enlarged for modal */
+
+/* Modal / selected image: full image by default */
+.modal-body {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Zoomable effect */
-.zoomable {
-  transform: scale(2); /* default enlarged */
+.modal-img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* ensures the full image is visible */
+  transform: scale(1); /* default: no zoom */
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
 }
+
+.modal-img:hover {
+  transform: scale(3); /* zoom only on hover */
+}
+
+
+
+
