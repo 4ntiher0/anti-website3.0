@@ -1,11 +1,12 @@
 .header {
+  pointer-events: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 3%;
-  padding-right: 4%;
-  height: 110px;
- 
+  height: 200px;
+  justify-content: center; 
+  align-items: center;    
   background: linear-gradient(90deg, rgb(28,33,37), rgb(50,56,56));
   position: sticky;
   top: 0;
@@ -15,7 +16,7 @@
 
 .headertxt img.header-logo {
   padding-top: 8%;
-  height: 150px; /* adjust as needed */
+  height: 250px;
   width: auto;
 }
 
@@ -30,37 +31,4 @@
   height: 50px;
 }
 
-.cube {
-  width: 50px;
-  height: 50px;
-  transform-style: preserve-3d;
-  animation: spin 8s infinite linear;
-  position: relative;  
-}
 
-.face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(28,33,37,0.85);
-  border: 0.5px solid rgb(161,37,32);
-  color: rgb(242,245,245);
-  font-size: 6px;
-  text-align: center;
-  line-height: 50px;
-  backface-visibility: hidden;
-}
-
-/* Cube faces positions */
-.front  { transform: translateZ(25px); }
-.back   { transform: rotateY(180deg) translateZ(25px); }
-.right  { transform: rotateY(90deg) translateZ(25px); }
-.left   { transform: rotateY(-90deg) translateZ(25px); }
-.top    { transform: rotateX(90deg) translateZ(25px); }
-.bottom { transform: rotateX(-90deg) translateZ(25px); }
-
-/* Smooth spinning animation */
-@keyframes spin {
-  0%   { transform: rotateX(0deg) rotateY(0deg); }
-  100% { transform: rotateX(360deg) rotateY(360deg); }
-}
