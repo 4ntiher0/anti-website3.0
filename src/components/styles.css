@@ -15,7 +15,8 @@ html, body {
   color: rgb(242, 245, 245);
   padding-left: 5%;
   padding-right: 5%;
-  overflow: hidden
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -27,21 +28,15 @@ main {
   border-bottom: solid rgb(161, 37, 32) 1px;  
   padding-left: 1%;
   background-color: rgb(44, 46, 46);
-  
-
-
-
 }
 
 
 .section {
-
   line-height: 2rem;
   margin-bottom: 1%;
   padding-left: 1.15%;
   padding-right: 1.15%;
   padding-top: 1.15%;
-  
 }
 
 .blog-title {
@@ -80,8 +75,6 @@ p {
   margin-bottom: 0%;
 }
 
-
-
 h2 {
   margin-top: 0%;  
 }
@@ -92,6 +85,7 @@ margin: 1%;
 }
 
 header {
+background: linear-gradient(90deg, rgb(28,33,37), rgb(50,56,56));
 flex-shrink: 0;
 }
 
@@ -115,14 +109,12 @@ footer {
   overflow-x: hidden;
   padding: 1px;
   max-width: auto;
-  
 }
 
 ::-webkit-scrollbar {
   height: 0px;
   width: 2px;
   background: #000;
-  
 }
 
 ::-webkit-scrollbar-thumb {
@@ -213,7 +205,3 @@ footer {
   margin-top: 10px;
   text-align: center;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

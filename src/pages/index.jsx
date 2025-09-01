@@ -1,7 +1,6 @@
 import React from "react";
 import profilePic from "../assets/profile.jpg";
-import "./home.css";
-
+import "./home.css"; // your existing CSS
 
 const Home = () => {
   return (
@@ -11,7 +10,7 @@ const Home = () => {
         <img src={profilePic} alt="4ntiher0 aka Anti" className="hero-pic" />
         <div className="hero-text">
           <h1>4ntiher0 aka Anti</h1>
-          <p>Welcome to Antis Area!</p>
+          <p>Welcome to Antis Arena!</p>
         </div>
       </section>
 
@@ -49,4 +48,3 @@ const Home = () => {
 };
 
 export default Home;
-
