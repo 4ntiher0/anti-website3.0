@@ -1,37 +1,28 @@
 import React, { useState } from "react";
-import './photos.css';
+import "./photos.css";
 
 const images = [
-  {
-    src: "/bags.jpg",
-    title: "Bagheera 'Safari in the Jungle'",
-    date: "Sept. 27, 2023",
-  },
-  {
-    src: "/eclipse.jpg",
-    title: "Eclipse through Leafs",
-    date: "Oct. 14, 2023",
-  },
-  {
-    src: "/audi02.jpg",
-    title: "Side Profile",
-    date: "",
-  },
-  {
-    src: "/audi01.jpg",
-    title: "Side Profile",
-    date: "",
-  },
+  { src: "/bags.jpg", title: "Bagheera 'Safari in the Jungle'", date: "Sept. 27, 2023" },
+  { src: "/eclipse.jpg", title: "Eclipse through Leafs", date: "Oct. 14, 2023" },
+  { src: "/audi02.jpg", title: "Side Profile", date: "" },
+  { src: "/audi01.jpg", title: "Side Profile", date: "" },
 ];
 
 function Photos() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setMousePos({ x, y });
+  };
 
   return (
     <div className="section">
       <h2 className="gallery-title">📸 Photos</h2>
 
-      {/* Responsive Gallery */}
       <div className="gallery-grid">
         {images.map((image, index) => (
           <div
@@ -48,12 +39,13 @@ function Photos() {
         ))}
       </div>
 
-      {/* Modal */}
+      {/* Modal / Enlarged */}
       {selectedImage && (
         <div className="modal" onClick={() => setSelectedImage(null)}>
           <div
             className="modal-body"
-            onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside
+            onClick={(e) => e.stopPropagation()}
+            onMouseMove={handleMouseMove}
           >
             <button className="modal-close" onClick={() => setSelectedImage(null)}>
               &times;
@@ -61,7 +53,10 @@ function Photos() {
             <img
               src={selectedImage.src}
               alt={selectedImage.title}
-              className="modal-img"
+              className="modal-img zoomable"
+              style={{
+                transformOrigin: `${mousePos.x}% ${mousePos.y}%`,
+              }}
             />
             <div className="modal-caption">
               <h3>{selectedImage.title}</h3>

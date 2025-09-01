@@ -1,78 +1,121 @@
-/* Gallery styles */
+/* ========================
+   Photos Page / Gallery
+======================== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
 }
 
 .gallery-card {
-  background: #1d1d1d;
-  border-radius: 10px;
+  position: relative;
   overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.gallery-card:hover {
-  transform: scale(1.03);
+  border-radius: 10px;
+  cursor: zoom-in;
 }
 
 .gallery-img {
   width: 100%;
-  height: 160px;
+  height: 180px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+  transform-origin: center center; /* default */
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(2); /* zoom in on hover */
+}
+
+
+.gallery-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(161, 37, 32, 0.5);
 }
 
 .gallery-info {
-  padding: 10px;
+  padding: 0.5rem 0;
   text-align: center;
 }
+
 .gallery-title {
-  font-size: 1.8rem;
-  margin: 5px 0;
+  font-weight: bold;
+  color: rgb(242, 245, 245);
+  margin: 0;
 }
+
 .gallery-date {
-  font-size: 0.85rem;
-  color: #bbb;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ========================
+   Modal Styles
+======================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-card {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 400px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.05); /* subtle hover zoom for small pics */
 }
 
 /* Modal */
 .modal {
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 999;
+  align-items: center;
+  z-index: 100;
 }
+
 .modal-body {
-  background: #222;
-  border-radius: 10px;
-  padding: 20px;
+  position: relative;
   max-width: 90%;
   max-height: 90%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow: hidden;
 }
-.modal-img {
-  max-width: 100%;
-  max-height: 70vh;
-  border-radius: 8px;
-}
+
 .modal-close {
   position: absolute;
   top: 10px;
   right: 15px;
   background: none;
   border: none;
-  color: #fff;
   font-size: 2rem;
+  color: white;
   cursor: pointer;
+  z-index: 2;
 }
-.modal-caption {
-  margin-top: 10px;
-  text-align: center;
+
+.modal-img {
+  display: block;
+  width: 100%;      /* full modal width */
+  height: auto;
+  transition: transform 0.1s ease-out;
+  transform: scale(2);   /* enlarged for modal */
+}
+
+/* Zoomable effect */
+.zoomable {
+  transform: scale(2); /* default enlarged */
 }
