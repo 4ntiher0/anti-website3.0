@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;   /* centers the items */
   align-items: center;       /* vertically centers */
-  gap: 30px;                 /* space between items */
+  gap: 20px;                 /* space between items */
   margin-top: 1.5px;
   margin-bottom: .5px;
   border-bottom: solid rgb(161, 37, 32) 1px;
