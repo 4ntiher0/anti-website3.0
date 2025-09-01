@@ -27,7 +27,13 @@ const Home = () => {
   {/* Time card */}
   <div className="time-card">
     <div className="word-clock">
-      <h2>{time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}</h2>
+      <h2>{time.toLocaleTimeString([], { 
+  hour: "2-digit", 
+  minute: "2-digit", 
+  second: "2-digit",
+  hour12: true
+})
+}</h2>
       <p className="word-clock-date">
         {time.toLocaleDateString([], { weekday: "long", month: "long", day: "numeric", year: "numeric" })}
       </p>
