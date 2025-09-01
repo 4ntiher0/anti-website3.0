@@ -1,6 +1,14 @@
+.cubewrap {
+  padding-top:20%;
+  margin-left: 46%;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
 .cube {
-  width: 50px;
-  height: 50px;
+  width: 100px;   /* doubled */
+  height: 100px;  /* doubled */
   transform-style: preserve-3d;
   animation: spin 8s infinite linear;
   position: relative;  
@@ -11,21 +19,21 @@
   width: 100%;
   height: 100%;
   background: rgba(28,33,37,0.85);
-  border: 0.5px solid rgb(161,37,32);
+  border: 1px solid rgb(161,37,32); /* doubled border thickness */
   color: rgb(242,245,245);
-  font-size: 6px;
+  font-size: 12px;  /* doubled */
   text-align: center;
-  line-height: 50px;
+  line-height: 100px; /* doubled */
   backface-visibility: hidden;
 }
 
 /* Cube faces positions */
-.front  { transform: translateZ(25px); }
-.back   { transform: rotateY(180deg) translateZ(25px); }
-.right  { transform: rotateY(90deg) translateZ(25px); }
-.left   { transform: rotateY(-90deg) translateZ(25px); }
-.top    { transform: rotateX(90deg) translateZ(25px); }
-.bottom { transform: rotateX(-90deg) translateZ(25px); }
+.front  { transform: translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.right  { transform: rotateY(90deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX(90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
 
 /* Smooth spinning animation */
 @keyframes spin {

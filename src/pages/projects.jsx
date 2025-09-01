@@ -5,6 +5,7 @@ function Projects() {
 
   return (
   <div className="section">
+    <div className="cubewrap">
         <div className="cube">
           <div className="face front">Front</div>
           <div className="face back">Back</div>
@@ -13,9 +14,8 @@ function Projects() {
           <div className="face top">Top</div>
           <div className="face bottom">Bottom</div>
         </div>
-</div>
-
-
+      </div>
+  </div>
     
 );
 }

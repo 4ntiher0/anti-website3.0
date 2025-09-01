@@ -6,8 +6,10 @@
   justify-content: center;   /* centers the items */
   align-items: center;       /* vertically centers */
   gap: 30px;                 /* space between items */
-  margin-top: 5px;
+  margin-top: 1.5px;
+  margin-bottom: .5px;
   border-bottom: solid rgb(161, 37, 32) 1px;
+  border-top: solid rgb(161, 37, 32) 1px;
   background-color: rgb(28, 33, 37);  
 }
 

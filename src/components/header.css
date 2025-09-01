@@ -1,6 +1,7 @@
 .header {
   pointer-events: none;
   display: flex;
+  flex-shrink: 0;
   justify-content: space-between;
   align-items: center;
   padding-left: 3%;
@@ -10,7 +11,8 @@
   background: linear-gradient(90deg, rgb(28,33,37), rgb(50,56,56));
   position: sticky;
   top: 0;
-  z-index: 1000;
+  margin-top: 2.5px;
+  border-bottom: solid rgb(161, 37, 32) 1px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 

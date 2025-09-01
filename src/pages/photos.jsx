@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './photos.css';
 
 const images = [
   {

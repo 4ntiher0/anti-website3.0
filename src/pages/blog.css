@@ -1,0 +1,28 @@
+.blog-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #f2f5f5;
+  padding-bottom: 0.3rem;
+}
+
+.post {
+  border-radius: 8px;
+  border: 1px solid grey;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  transition: all 0.3s ease;
+}
+
+.post-date {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: rgb(161, 37, 32);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.post-text {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
