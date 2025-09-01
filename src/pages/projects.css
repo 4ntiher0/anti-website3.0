@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 50%;
   perspective: 800px; /* keeps 3D depth */
 }
 
@@ -19,13 +19,18 @@
   width: 100%;
   height: 100%;
   background: rgba(28,33,37,0.85);
-  border: 1px solid rgb(161,37,32);  /* scaled border */
-  color: rgb(242,245,245);
-  font-size: 12px; /* bigger text */
-  text-align: center;
-  line-height: 100px; /* matches new cube size */
+  border: 1px solid rgb(161,37,32);
   backface-visibility: hidden;
+  overflow: hidden; /* ensures image doesn’t overflow */
 }
+
+.face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the face while keeping aspect ratio */
+  display: block;
+}
+
 
 /* Faces positions for 100px cube */
 .front  { transform: translateZ(50px); }
