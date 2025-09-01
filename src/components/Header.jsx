@@ -1,11 +1,12 @@
 import React from 'react';
 import './header.css';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   return (
     <header className="header">
       <div className="headertxt">
-        <img src="/public/logo.png" alt="ANTIs ARENA Logo" className="header-logo" />
+        <img src={logo} alt="ANTIs ARENA Logo" className="header-logo" />
       </div>
       <div className="headerlogo">
         <div className="cube">
