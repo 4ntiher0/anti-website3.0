@@ -10,7 +10,7 @@ const Home = () => {
         <img src={profilePic} alt="4ntiher0 aka Anti" className="hero-pic" />
         <div className="hero-text">
           <h1>4ntiher0 aka Anti</h1>
-          <p>Welcome to Antis Arena!</p>
+          <p>Welcome to Anti's Arena!</p>
         </div>
       </section>
 
