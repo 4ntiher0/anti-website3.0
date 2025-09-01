@@ -1,0 +1,21 @@
+.nav {
+    position: relative;
+    width: 100%;
+    left: 0%;
+    height: 40px;
+    display: flex;
+    margin-top: 5px;
+    border-bottom: solid aqua 1px;  
+  }
+  
+  .nav a {
+    color: aqua;
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav a:hover {
+    background-color: aqua;
+    color: black;
+  }

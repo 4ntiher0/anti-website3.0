@@ -1,0 +1,158 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+    font-family: Arial;
+  background: black;
+  color: aqua;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure the app takes up the entire viewport */
+  overflow: hidden; /* Prevent the entire page from scrolling */
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* Adjust the scrollbar for the .content element */
+.content {
+  flex: 1; /* Allow the content to expand and fill remaining space */
+  overflow-y: scroll; /* Enable vertical scrolling for content */
+  padding: 10px;
+  max-width: auto;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 8px;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+}
+
+
+.section {
+  min-height: 50px;
+  line-height: 2rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.post {
+
+  border-radius: 5px;
+  border: solid grey 1px;
+  margin: 2%;
+  background-color: rgb(29, 28, 28);
+
+  
+}
+
+p {
+  margin-top: 0%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 0%;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  left: 0%;
+  height: 40px;
+  display: flex;
+  padding-top: 1%;
+  border-top: solid aqua 1px; 
+}
+
+h2 {
+  margin-top: 0%;  
+}
+
+Date {
+text-decoration: underline;
+margin: 1%;
+}
+
+/* Gallery styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Initially set to display two columns */
+
+  /* Set a minimum width for each image item */
+  min-width: 600px; /* Adjust as needed */
+  max-width: 1200px; /* Adjust as needed */
+  margin: auto; /* Center the gallery */
+  grid-gap: 20px;
+}
+
+/* Media query to adjust the grid layout for smaller screens */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr); /* Display one column for smaller screens */
+    min-width: unset;
+    max-width: unset;
+  }
+}
+
+.image-item {
+  border: 1px solid #ccc;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-info {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Modal styles */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  overflow: auto;
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+}

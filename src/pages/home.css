@@ -1,0 +1,62 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 5%;
+  color: rgb(242,245,245);
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, rgb(28,33,37), rgb(50,56,56));
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.hero-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid rgb(161,37,32);
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: rgb(161,37,32);
+}
+
+.hero-text p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  max-width: 500px;
+}
+
+section {
+  padding: 1.5rem;
+  background-color: rgb(50,56,56);
+  border-radius: 10px;
+}
+
+section h2 {
+  color: rgb(161,37,32);
+  margin-bottom: 0.8rem;
+}
+
+section p, section li {
+  line-height: 1.5rem;
+}
+
+.skills ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.contact p {
+  margin: 0.3rem 0;
+}
